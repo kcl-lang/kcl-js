@@ -1,2 +1,3 @@
-# kclvm-js
-KCLVM binding for Javascript
+# kcl-js
+
+KCL Javascript/Typescript SDK
