@@ -1,9 +1,50 @@
-# kcl-js
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkcl-lang%2Fkcl-js.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkcl-lang%2Fkcl-js?ref=badge_shield)
+# KCL Javascript/Typescript SDK
 
+Synchronized from the repo: https://github.com/kcl-lang/lib/tree/main/nodejs
 
-KCL Javascript/Typescript SDK
+## Installation
 
+```shell
+npm install kcl-lib
+```
 
-## License
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkcl-lang%2Fkcl-js.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkcl-lang%2Fkcl-js?ref=badge_large)
+## Quick Start
+
+```typescript
+import { execProgram, ExecProgramArgs } from "kcl-lib";
+
+function main() {
+  const result = execProgram(new ExecProgramArgs(["schema.k"]));
+  console.log(result.yamlResult);
+}
+
+main();
+```
+
+## Developing
+
+- Install `node.js` and `pnpm`
+- Install `cargo` (for Rust code)
+- Install dependencies
+
+```shell
+pnpm install
+```
+
+### Building
+
+```shell
+pnpm build
+```
+
+### Testing
+
+```shell
+pnpm test
+```
+
+### Format
+
+```shell
+pnpm format
+```
